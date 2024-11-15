@@ -22,16 +22,22 @@ The application includes three main modules:
 To run the application, use:
 
 ```bash
-go run main.go
+go run ./cmd/generate/main.go
 ```
 
 If you want to specify a mnemonic phrase to generate the seed and keys, provide it as an argument. For example:
 
 ```bash
-go run main.go "lake genuine grab onion skill tilt news decrease library finish update vehicle"
+go run ./cmd/generate/main.go "lake genuine grab onion skill tilt news decrease library finish update vehicle"
 ```
 
 If a mnemonic phrase is provided, the application will use it to generate the seed and keys. If no phrase is provided, a new one will be generated and displayed in the console.
+
+In order to build an executable, you can launch
+
+```bash
+go build ./cmd/generate/
+```
 
 ## Testing
 
@@ -40,7 +46,7 @@ The project includes a comprehensive set of test files.
 To run the tests, execute:
 
 ```bash
-go test ./... -v
+go test ./src/... -v
 ```
 
 ### Test Coverage

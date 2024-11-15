@@ -1,13 +1,12 @@
 package main
 
 import (
+	"curve25519_keygen/src/keygen"
+	"curve25519_keygen/src/mnemonic"
 	"encoding/hex"
 	"fmt"
 	"log"
 	"os"
-
-	"curve25519_keygen/keygen"
-	"curve25519_keygen/mnemonic"
 )
 
 // Prints the private and public keys in hexadecimal format.
