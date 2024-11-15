@@ -1,8 +1,8 @@
 package main
 
 import (
-	"curve25519_keygen/src/keygen"
-	"curve25519_keygen/src/mnemonic"
+	"ed25519_keygen/src/keygen"
+	"ed25519_keygen/src/mnemonic"
 	"encoding/hex"
 	"fmt"
 	"log"

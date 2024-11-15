@@ -1,6 +1,6 @@
-# Curve25519 Key Generator
+# ED25519 Key Generator
 
-This project is a POC that provides utilities to generate cryptographic keys and seeds, leveraging Curve25519 for key derivation and AES-GCM for encryption. It includes modules for generating mnemonic phrases, seeds, private keys, and public keys.
+This project is a POC that provides utilities to generate cryptographic keys and seeds, leveraging ED25519 for key derivation. It includes modules for generating mnemonic phrases, seeds, private keys, and public keys.
 
 ## Table of Contents
 
@@ -13,7 +13,7 @@ This project is a POC that provides utilities to generate cryptographic keys and
 
 The application includes three main modules:
 
-1. **Key Generation**: Generates private and public keys using Curve25519 and performs encryption and decryption with AES-GCM.
+1. **Key Generation**: Generates private and public keys using ED25519.
 2. **Mnemonic Generation**: Generates mnemonic phrases for seed creation following the BIP-39 standard.
 3. **Main Application**: Combines mnemonic-based seed generation and key derivation to produce and display a public-private key pair.
 
@@ -59,7 +59,7 @@ go test ./src/... -v
 This project uses Go modules to manage dependencies. The primary dependencies are:
 
 - `github.com/tyler-smith/go-bip39`: Provides functions for BIP-39 mnemonic phrase generation and seed derivation.
-- `golang.org/x/crypto`: Used for Curve25519 key generation and AES-GCM encryption.
+- `golang.org/x/crypto`: Used for ED25519 key generation.
 
 ## License
 

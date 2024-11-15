@@ -1,4 +1,4 @@
-module curve25519_keygen
+module ed25519_keygen
 
 go 1.23.2
 
