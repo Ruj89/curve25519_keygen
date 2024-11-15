@@ -2,7 +2,6 @@ package mnemonic
 
 import (
 	"errors"
-	"fmt"
 
 	"github.com/tyler-smith/go-bip39"
 )
@@ -18,7 +17,6 @@ func GetMnemonic(args []string) (string, error) {
 	}
 	entropy, _ := bip39.NewEntropy(128)
 	mnemonic, _ := bip39.NewMnemonic(entropy)
-	fmt.Printf("Generated New Mnemonic Phrase: %s\n", mnemonic)
 	return mnemonic, nil
 }
 

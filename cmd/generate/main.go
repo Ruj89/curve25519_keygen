@@ -10,7 +10,8 @@ import (
 )
 
 // Prints the private and public keys in hexadecimal format.
-func PrintKeyInfo(privateKey, publicKey []byte) {
+func PrintKeyInfo(mnemonicPhrase string, privateKey, publicKey []byte) {
+	fmt.Printf("Mnemonic phrase: %s\n", mnemonicPhrase)
 	fmt.Printf("Private Key: %s\n", hex.EncodeToString(privateKey))
 	fmt.Printf("Public Key: %s\n", hex.EncodeToString(publicKey))
 }
@@ -26,12 +27,15 @@ func main() {
 	seed := mnemonic.GenerateSeed(mnemonicPhrase, "")
 
 	// Generates the private and public keys using the seed
-	privateKey := keygen.GeneratePrivateKey(seed)
+	privateKey, err := keygen.GeneratePrivateKey(seed)
+	if err != nil {
+		log.Fatalf("Error generating private key: %v", err)
+	}
 	publicKey, err := keygen.GeneratePublicKey(privateKey)
 	if err != nil {
 		log.Fatalf("Error generating public key: %v", err)
 	}
 
 	// Outputs the generated private and public keys
-	PrintKeyInfo(privateKey, publicKey)
+	PrintKeyInfo(mnemonicPhrase, privateKey, publicKey)
 }
